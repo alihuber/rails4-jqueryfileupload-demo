@@ -3,10 +3,36 @@
     New Task
   .row
     = form_for @task do |f|
-      .col-md-4
+      .col-md-6
         = f.label :title
         = f.text_field :title, class: "form-control"
         = f.label :description
         = f.text_field :description, class: "form-control"
+        %br
+        = f.label :attachments
+        %br
+        .span7
+          %span.btn.btn-success.btn-file
+            %span.glyphicon.glyphicon-plus
+              Add Files...
+              %input#fileupload{"data-url" => "server/php/", multiple: "multiple", name: "files[]", type: "file"}
+          %span.btn.btn-warning.cancel{type: "reset"}
+            %span.glyphicon.glyphicon-ban-circle
+              Cancel Upload
+          %span.btn.btn-danger.delete{type: "button"}
+            %span.glyphicon.glyphicon-trash
+              Delete
+          %input.toggle{type: "checkbox"}/
+        .span5
+          / The global progress bar
+          .progress.progress-success.progress-striped.active.fade
+            .bar{style: "width:0%;"}
+        / The loading indicator is shown during image processing
+        .fileupload-loading
+        %br/
+        / The table listing the files available for upload/download
+        %table.table.table-striped
+          %tbody.files{"data-target" => "#modal-gallery", "data-toggle" => "modal-gallery"}
+
         %br
         = content_tag :button, "Add Task", type: :submit, class: "btn btn-primary"
