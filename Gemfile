@@ -14,9 +14,15 @@ gem "turbolinks"
 gem "jbuilder", "~> 1.2"
 
 gem "carrierwave"
+gem "mini_magick"
 gem "rails-assets-jquery"
 gem "rails-assets-jquery-ui"
-gem "rails-assets-jquery-file-upload"
+gem "rails-assets-jquery-ujs-standalone"
+gem "rails-assets-blueimp-load-image"
+gem "rails-assets-blueimp-file-upload"
+gem "rails-assets-blueimp-tmpl"
+
+gem "pry-rails"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

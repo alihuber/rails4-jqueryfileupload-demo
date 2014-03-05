@@ -12,7 +12,10 @@
 //
 //= require jquery
 //= require jquery-ui
+//= require jquery-ujs-standalone
 //= require turbolinks
-//= require_tree .
 //= require bootstrap
-//= require jquery-file-upload
+//= require blueimp-load-image
+//= require blueimp-file-upload
+//= require blueimp-tmpl
+//= require_tree .

@@ -1,16 +1,13 @@
 $ ->
   $("#fileupload").fileupload
     dataType: "json"
-    done: (e, data) ->
-      $.each data.result.files, (index, file) ->
-        $("<p/>").text(file.name).appendTo document.body
-        return
-
+    add: (e, data) ->
+      data.context = $("<p/>").text("Uploading...").appendTo(document.body)
+      data.submit()
       return
 
-    progressall: (e, data) ->
-      progress = parseInt(data.loaded / data.total * 100, 10)
-      $("#progress .bar").css "width", progress + "%"
+    done: (e, data) ->
+      data.context.text "Upload finished."
       return
 
   return
