@@ -21,6 +21,7 @@ gem "rails-assets-jquery-ujs-standalone"
 gem "rails-assets-blueimp-load-image"
 gem "rails-assets-blueimp-file-upload"
 gem "rails-assets-blueimp-tmpl"
+gem "jquery-turbolinks"
 
 gem "pry-rails"
 
