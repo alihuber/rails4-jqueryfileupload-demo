@@ -157,6 +157,7 @@ DEPENDENCIES
   mini_magick
   pry-rails
   rails (= 4.0.3)
+  rails-assets-blueimp-canvas-to-blob
   rails-assets-blueimp-file-upload
   rails-assets-blueimp-load-image
   rails-assets-blueimp-tmpl

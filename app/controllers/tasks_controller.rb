@@ -7,6 +7,7 @@ class TasksController < ApplicationController
 
   def new
     @task = Task.new
+    @attachment = Attachment.new
   end
 
   def create

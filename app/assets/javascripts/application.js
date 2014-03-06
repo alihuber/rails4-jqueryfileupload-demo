@@ -17,6 +17,7 @@
 //= require turbolinks
 //= require bootstrap
 //= require blueimp-load-image
+//= require blueimp-canvas-to-blob
 //= require blueimp-file-upload
 //= require blueimp-tmpl
 //= require_tree .

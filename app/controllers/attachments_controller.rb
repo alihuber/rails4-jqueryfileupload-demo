@@ -7,7 +7,6 @@ class AttachmentsController < ApplicationController
 
   def create
     params[:files].each do |file|
-      binding.pry
       attachment = Attachment.new
       attachment.file = file
       if attachment.save
