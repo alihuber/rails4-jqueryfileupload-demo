@@ -18,6 +18,9 @@
           %span.glyphicon.glyphicon-plus
             Add Files...
             %input#fileupload{"data-url" => "/attachments", multiple: "multiple", name: "files[]", type: "file", method: "post" }
+        -# %span.btn.btn-primary.start{type: "submit"}
+        -#   %span.glyphicon.glyphicon-upload
+        -#     Start upload
         -# %span.btn.btn-warning.cancel{type: "reset"}
         -#   %span.glyphicon.glyphicon-ban-circle
         -#     Cancel Upload
@@ -38,10 +41,15 @@
         -# = render "attachments/template_upload"
         -# = render "attachments/template_download"
 
+        %br
+        %br
         #progress.progress
           .progress-bar.progress-bar-success
 
         #files.files
+
+        = render "attachments/template_download"
+        = render "attachments/template_upload"
 
         %br
         = content_tag :button, "Add Task", type: :submit, class: "btn btn-primary"
