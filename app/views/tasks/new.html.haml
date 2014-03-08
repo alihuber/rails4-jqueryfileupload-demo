@@ -1,5 +1,6 @@
 %script{src: "/assets/blueimp-file-upload/jquery.fileupload-process.js"}
 %script{src: "/assets/blueimp-file-upload/jquery.fileupload-image.js"}
+%script{src: "/assets/blueimp-file-upload/jquery.fileupload-ui.js"}
 
 .container
   %h1
@@ -37,16 +38,11 @@
         -# / The table listing the files available for upload/download
         -# %table.table.table-striped
         -#   %tbody.files{"data-target" => "#modal-gallery", "data-toggle" => "modal-gallery"}
-
-        -# = render "attachments/template_upload"
-        -# = render "attachments/template_download"
-
         %br
         %br
-        #progress.progress
-          .progress-bar.progress-bar-success
-
-        #files.files
+        -# #files.files
+        %table.table.table-striped{role: "presentation"}
+          %tbody.files
 
         = render "attachments/template_download"
         = render "attachments/template_upload"

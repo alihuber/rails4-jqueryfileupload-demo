@@ -17,7 +17,8 @@ class AttachmentsController < ApplicationController
             :layout => false
           }
           format.json {
-            render :json => [attachment.to_jq_upload].to_json
+            out = {"files" => [attachment.to_jq_upload]}.to_json
+            render :json => out
           }
         end
       else
