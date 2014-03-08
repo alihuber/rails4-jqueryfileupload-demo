@@ -13,9 +13,10 @@
         %tr
           %td= task.title
           %td= task.description
-          - if task.attachments.any?
-            - task.attachments.each do |attachment|
-              %td= image_tag(attachment.file.url, size: "100x100")
+          %td
+            - if task.attachments.any?
+              - task.attachments.each do |attachment|
+                = image_tag(attachment.file.url, size: "100x100")
           %td= link_to "Destroy", task_path(task), method: :delete, data: { confirm: "Are you sure?" }
   %br/
   = link_to "New Task", new_task_path
