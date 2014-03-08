@@ -26,7 +26,7 @@
         </td>
         <td>
             {% if (file.delete_url) { %}
-                <button class="btn btn-danger delete" data-method="delete" data-url="{%=file.delete_url%}"{% if (file.deleteWithCredentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
+                <button class="btn btn-danger delete delete-elem" data-method="delete" data-url="{%=file.delete_url%}"{% if (file.deleteWithCredentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
                     <span class="glyphicon glyphicon-trash"></span>
                     <span>Delete</span>
                 </button>

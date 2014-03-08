@@ -7,11 +7,12 @@ class TasksController < ApplicationController
 
   def new
     @task = Task.new
-    @attachment = Attachment.new
   end
 
   def create
     @task = Task.new(task_parameters)
+    attachment_ids = params[:attachments].split(",")
+    @task.attachments << Attachment.find(attachment_ids)
     if @task.save
       @tasks = Task.all
       render "index"
