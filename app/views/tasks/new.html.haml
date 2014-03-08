@@ -7,7 +7,7 @@
     New Task
   .row
     = form_for @task do |f|
-      .col-md-6
+      .col-md-4
         = f.label :title
         = f.text_field :title, class: "form-control"
         = f.label :description
@@ -16,22 +16,24 @@
         = f.label :attachments
         %br
   .row
-    .col-md-10
+    .col-md-6
       .buttonbar
         %span.btn.btn-success.btn-file
           %span.glyphicon.glyphicon-plus
-            Add Files...
-            %input#fileupload{"data-url" => "/attachments", multiple: "multiple", name: "files[]", type: "file", method: "post" }
+          Add Files...
+          %input#fileupload{"data-url" => "/attachments", multiple: "multiple", name: "files[]", type: "file", method: "post" }
         %span.btn.btn-primary.start{type: "submit"}
           %span.glyphicon.glyphicon-upload
-            Start upload
+          Start upload
         %span.btn.btn-warning.cancel{type: "reset"}
           %span.glyphicon.glyphicon-ban-circle
-            Cancel Upload
+          Cancel Upload
         %span.btn.btn-danger.delete{type: "button"}
           %span.glyphicon.glyphicon-trash
-            Delete
-        %input.delete-toggle{type: "checkbox"}/
+          Delete
+        %label.checkbox-inline
+          %input.delete-toggle{type: "checkbox"}/
+          Select All
       %br
       %br
   .row
@@ -43,6 +45,6 @@
       = render "attachments/template_upload"
 
   .row
-    .col-md-6
+    .col-md-4
       %br
       = content_tag :button, "Add Task", type: :submit, class: "btn btn-primary"
