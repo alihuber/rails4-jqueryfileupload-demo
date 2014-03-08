@@ -15,37 +15,34 @@
         %br
         = f.label :attachments
         %br
+  .row
+    .col-md-10
+      .buttonbar
         %span.btn.btn-success.btn-file
           %span.glyphicon.glyphicon-plus
             Add Files...
             %input#fileupload{"data-url" => "/attachments", multiple: "multiple", name: "files[]", type: "file", method: "post" }
-        -# %span.btn.btn-primary.start{type: "submit"}
-        -#   %span.glyphicon.glyphicon-upload
-        -#     Start upload
-        -# %span.btn.btn-warning.cancel{type: "reset"}
-        -#   %span.glyphicon.glyphicon-ban-circle
-        -#     Cancel Upload
-        -# %span.btn.btn-danger.delete{type: "button"}
-        -#   %span.glyphicon.glyphicon-trash
-        -#     Delete
-        -# %input.toggle{type: "checkbox"}/
-        -# / The global progress bar
-        -# .progress.progress-success.progress-striped.active.fade
-        -#   .bar{style: "width:0%;"}
-        -# / The loading indicator is shown during image processing
-        -# .fileupload-loading
-        -# %br/
-        -# / The table listing the files available for upload/download
-        -# %table.table.table-striped
-        -#   %tbody.files{"data-target" => "#modal-gallery", "data-toggle" => "modal-gallery"}
-        %br
-        %br
-        -# #files.files
-        %table.table.table-striped{role: "presentation"}
-          %tbody.files
+        %span.btn.btn-primary.start{type: "submit"}
+          %span.glyphicon.glyphicon-upload
+            Start upload
+        %span.btn.btn-warning.cancel{type: "reset"}
+          %span.glyphicon.glyphicon-ban-circle
+            Cancel Upload
+        %span.btn.btn-danger.delete{type: "button"}
+          %span.glyphicon.glyphicon-trash
+            Delete
+        %input.delete-toggle{type: "checkbox"}/
+      %br
+      %br
+  .row
+    .col-md-6
+      %table.table.table-striped
+        %tbody.files
 
-        = render "attachments/template_download"
-        = render "attachments/template_upload"
+      = render "attachments/template_download"
+      = render "attachments/template_upload"
 
-        %br
-        = content_tag :button, "Add Task", type: :submit, class: "btn btn-primary"
+  .row
+    .col-md-6
+      %br
+      = content_tag :button, "Add Task", type: :submit, class: "btn btn-primary"
