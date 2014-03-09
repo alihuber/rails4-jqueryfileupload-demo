@@ -3,12 +3,12 @@
 %script{src: "/assets/blueimp-file-upload/jquery.fileupload-ui.js"}
 :javascript
   $(function(){
-    new Demo.newTask();
+    new Demo.editTask();
   });
 
 .container
   %h1
-    New Task
+    Edit Task
   .row
     = form_for @task do |f|
       .col-md-6
@@ -24,7 +24,7 @@
           %span.btn.btn-success.btn-file
             %span.glyphicon.glyphicon-plus
             Add Files...
-            %input#fileupload{"data-url" => "/attachments", multiple: "multiple", name: "files[]", type: "file", method: "post" }
+            %input#fileupload{"data-url" => "/attachments", multiple: "multiple", name: "files[]", type: "file", method: "patch" }
           %span.btn.btn-primary.start{type: "submit"}
             %span.glyphicon.glyphicon-upload
             Start upload
@@ -44,6 +44,4 @@
         = render "attachments/template_download"
         = render "attachments/template_upload"
 
-        = content_tag :button, "Add Task", type: :submit, class: "btn btn-primary", id: "submit_task"
-
-        = link_to "Back", tasks_path, id: "back_link"
+        = content_tag :button, "Update Task", type: :submit, class: "btn btn-primary", id: "submit_task"

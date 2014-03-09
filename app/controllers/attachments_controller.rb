@@ -2,7 +2,6 @@ class AttachmentsController < ApplicationController
 
   def index
     @attachments = Attachment.all
-    render :json => @attachments.collect { |a| a.to_jq_upload }.to_json
   end
 
   def create

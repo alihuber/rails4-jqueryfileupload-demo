@@ -1,4 +1,4 @@
-$ ->
+Demo.newTask = ->
   $("#fileupload").fileupload
     dataType: "json"
     autoUpload: false
