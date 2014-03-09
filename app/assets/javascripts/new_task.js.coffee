@@ -10,21 +10,18 @@ Demo.newTask = ->
     previewCrop: true
     filesContainer: $("tbody.files")
 
-
+  # we have to handle these ourselves
   $(".start").on "click", ->
     $("tbody.files").find(".start").click()
 
-
   $(".cancel").on "click", ->
     $("tbody.files").find(".cancel").click()
-
 
   $(".delete-toggle").click ->
     if $(this).is(":checked")
       $("tbody.files").find(".toggle").prop "checked", true
     else
       $("tbody.files").find(".toggle").prop "checked", false
-
 
   $(".delete").click ->
     $("tbody.files").find(".toggle:checked").closest(".template-download").find(".delete").click()
@@ -38,6 +35,8 @@ Demo.newTask = ->
     $("#submitted_attachments").val ids
 
 
+  # task creation aborted: already uploaded images have to be deleted
+  # to prevent orphaned attachments
   $("#back_link").click ->
     $(".delete-elem").each ->
       $(this).click()

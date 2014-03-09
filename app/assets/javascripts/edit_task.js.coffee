@@ -11,6 +11,7 @@ Demo.editTask = ->
     previewCrop: true
     filesContainer: $("tbody.files")
 
+  # load existing files
   $.getJSON $("#fileupload").prop("action"), (files) ->
     fu = $("#fileupload").data("blueimp-fileupload")
     template = fu._renderDownload(files)
@@ -25,17 +26,14 @@ Demo.editTask = ->
   $(".start").on "click", ->
     $("tbody.files").find(".start").click()
 
-
   $(".cancel").on "click", ->
     $("tbody.files").find(".cancel").click()
-
 
   $(".delete-toggle").click ->
     if $(this).is(":checked")
       $("tbody.files").find(".toggle").prop "checked", true
     else
       $("tbody.files").find(".toggle").prop "checked", false
-
 
   $(".delete").click ->
     $("tbody.files").find(".toggle:checked").closest(".template-download").find(".delete").click()

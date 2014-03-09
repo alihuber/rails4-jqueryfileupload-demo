@@ -1,4 +1,4 @@
-= form_for @task do |f|
+.row
   .col-md-6
     = f.label :title
     = f.text_field :title, class: "form-control"
@@ -32,4 +32,3 @@
     = render "attachments/template_download"
     = render "attachments/template_upload"
 
-    = content_tag :button, "Confirm", type: :submit, class: "btn btn-primary", id: "submit_task"
