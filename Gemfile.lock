@@ -167,5 +167,4 @@ DEPENDENCIES
   sass-rails
   sdoc
   sqlite3
-  turbolinks
   uglifier

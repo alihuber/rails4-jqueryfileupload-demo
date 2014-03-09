@@ -14,7 +14,6 @@
 //= require jquery.turbolinks
 //= require jquery-ui
 //= require jquery-ujs-standalone
-//= require turbolinks
 //= require bootstrap
 //= require blueimp-load-image
 //= require blueimp-canvas-to-blob

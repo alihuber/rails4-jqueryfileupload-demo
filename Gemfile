@@ -10,7 +10,6 @@ gem "uglifier"
 gem "coffee-rails"
 gem "haml-rails"
 
-gem "turbolinks"
 gem "jbuilder", "~> 1.2"
 
 gem "carrierwave"
