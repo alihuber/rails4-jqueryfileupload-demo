@@ -36,3 +36,8 @@ $ ->
     $(".delete-elem").each ->
       ids.push $(this).attr("data-url").replace("/attachments/", "")
     $("#submitted_attachments").val ids
+
+
+  $("#back_link").click ->
+    $(".delete-elem").each ->
+      $(this).click()

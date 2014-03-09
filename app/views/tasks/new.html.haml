@@ -41,3 +41,5 @@
         = render "attachments/template_upload"
 
         = content_tag :button, "Add Task", type: :submit, class: "btn btn-primary", id: "submit_task"
+
+        = link_to "Back", tasks_path, id: "back_link"
