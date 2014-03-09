@@ -35,8 +35,8 @@ Demo.newTask = ->
     $("#submitted_attachments").val ids
 
 
-  # task creation aborted: already uploaded images have to be deleted
-  # to prevent orphaned attachments
+  # task creation aborted: already uploaded images will be deleted
+  # to minimize orphaned attachments
   $("#back_link").click ->
     $(".delete-elem").each ->
       $(this).click()
