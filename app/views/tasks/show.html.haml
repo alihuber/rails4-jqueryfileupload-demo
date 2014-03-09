@@ -1,0 +1,20 @@
+.container
+  %h1
+    Task
+    = @task.title
+
+  %h3
+    = @task.description
+
+  %br
+  %br
+
+  %h4
+    Attachments
+  - if @task.attachments.any?
+    - @task.attachments.each do |attachment|
+      = image_tag(attachment.file.url, size: "100x100")
+
+  %br
+  %br
+  = link_to "Back", tasks_path
