@@ -1,12 +1,6 @@
-:javascript
-  $(function(){
-    new Demo.newTask();
-  });
-
 .container
   %h1
     New Task
   = form_for @task do |f|
     = render "form", f: f
     = content_tag :button, "Confirm", type: :submit, class: "btn btn-primary", id: "submit_task"
-    = link_to "Back", tasks_path, id: "back_link"

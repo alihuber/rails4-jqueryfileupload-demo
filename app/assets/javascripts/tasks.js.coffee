@@ -1,6 +1,5 @@
-Demo.editTask = ->
+$(document).ready ->
   $("#fileupload").fileupload
-    url: "attachments/"
     dataType: "json"
     autoUpload: false
     acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i
