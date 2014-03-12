@@ -10,18 +10,19 @@ gem "uglifier"
 gem "coffee-rails"
 gem "haml-rails"
 
+gem "jquery-rails"
+gem "jquery-ui-rails"
+gem "jquery-turbolinks"
+
 gem "jbuilder", "~> 1.2"
 
 gem "carrierwave"
 gem "mini_magick"
-gem "rails-assets-jquery"
-gem "rails-assets-jquery-ui"
-gem "rails-assets-jquery-ujs-standalone"
+
 gem "rails-assets-blueimp-load-image"
 gem "rails-assets-blueimp-canvas-to-blob"
-gem "rails-assets-blueimp-file-upload"
 gem "rails-assets-blueimp-tmpl"
-gem "jquery-turbolinks"
+gem "rails-assets-blueimp-file-upload"
 
 gem "pry-rails"
 

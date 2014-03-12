@@ -12,8 +12,8 @@
 //
 //= require jquery
 //= require jquery.turbolinks
-//= require jquery-ui
-//= require jquery-ujs-standalone
+//= require jquery_ujs
+//= require jquery.ui.progressbar
 //= require bootstrap
 //= require blueimp-load-image
 //= require blueimp-canvas-to-blob
