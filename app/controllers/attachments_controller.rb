@@ -1,9 +1,5 @@
 class AttachmentsController < ApplicationController
 
-  def index
-    @attachments = Attachment.all
-  end
-
   def create
     params[:files].each do |file|
       attachment = Attachment.new

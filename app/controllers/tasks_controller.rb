@@ -2,13 +2,6 @@ class TasksController < ApplicationController
 
   def index
     @tasks = Task.all
-    respond_to do |format|
-      format.html
-      format.json {
-        attachments = @task.attachments.collect { |a| a.to_jq_upload }.to_json
-        render :json => {"files" => attachments}
-      }
-    end
   end
 
 
