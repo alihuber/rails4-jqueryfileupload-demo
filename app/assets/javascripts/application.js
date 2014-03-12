@@ -15,8 +15,11 @@
 //= require jquery_ujs
 //= require jquery.ui.progressbar
 //= require bootstrap
+//= require blueimp-tmpl
 //= require blueimp-load-image
 //= require blueimp-canvas-to-blob
-//= require blueimp-file-upload
-//= require blueimp-tmpl
+//= require blueimp-file-upload/jquery.fileupload
+//= require blueimp-file-upload/jquery.fileupload-process
+//= require blueimp-file-upload/jquery.fileupload-image
+//= require blueimp-file-upload/jquery.fileupload-ui
 //= require_tree .
